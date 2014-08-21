@@ -9,9 +9,28 @@ app.config.update(config)
 
 
 @app.route("/")
-def hello_word():
+def overview():
     output = render_template(
         "overview.html"
     )
     return output
+@app.route("/overview")
+def tournamentOverview():
+    output = render_template(
+        "tournamentOverview.html"
+    )
+    return output
+@app.route("/config")
+def tournamentConfig():
+    output = render_template(
+        "tournamentConfig.html"
+    )
+    return output
+@app.route("/info")
+def tournamentInformation():
+    output = render_template(
+        "tournamentInformation.html"
+    )
+    return output
+
 app.run(host='0.0.0.0')
