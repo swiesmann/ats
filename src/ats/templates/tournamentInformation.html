@@ -4,16 +4,31 @@
     <meta charset="UTF-8">
     <title></title>
   <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <style type="text/css">
-    .settings {
+    #switchView {
       position: fixed;
       top: 0;
+      right: 0;
+    }
+
+    .settings {
+      position: fixed;
+      top: 50px;
       right: 0;
       width: 300px;
     }
 
     .clickable {
       cursor: pointer;
+    }
+
+    .btn-group-vertical {
+      width: 300px;
+    }
+
+    .btn-group-vertical i {
+      float: left;
     }
   </style>
 </head>
@@ -59,7 +74,7 @@
 </div>
 			<div class="settings panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title">Settings</h3>
+					<h3 class="panel-title"><i class="fa fa-fw fa-gear" style="float: right;"></i></h3>
 					<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
 				</div>
 				<div class="panel-body">
@@ -71,6 +86,27 @@
                   </form>
 				</div>
 		    </div>
+<button id="switchView" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  <i class="fa fa-fw fa-eye"></i>
+</button>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Ansicht wechseln</h4>
+      </div>
+      <div class="modal-body text-center">
+        <div class="btn-group-vertical btn-group-lg">
+          <a href="{{ url_for('tournamentInformation') }}" class="btn btn-default"><i class="fa fa-user"></i> Spielermatrix</a>
+          <a href="{{ url_for('tournamentInformation') }}" class="btn btn-default"><i class="fa fa-table"></i> Turnierbaum</a>
+          <a href="{{ url_for('tournamentInformation') }}" class="btn btn-default"><i class="fa fa-user"></i> Spieler&uuml;bersicht</a>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 </body>
 <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
