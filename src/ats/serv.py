@@ -33,7 +33,7 @@ def tournamentInformation():
     )
     return output
 @app.route("/tableSetup")
-def tournamentInformation():
+def tableSetup():
     output = render_template(
         "tableSetup.html"
     )

@@ -1,12 +1,161 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
+  <meta charset="UTF-8">
+  <title></title>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+<br><br>
 
+<div class="container">
+  <div class="row">
+    <form role="form">
+      <div class="col-md-8">
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th>Table Number</th>
+            <th>Table Type</th>
+            <th>Activ</th>
+            <th>Cam</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>1</td>
+            <td>Leonhart</td>
+            <td>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox">
+                </label>
+              </div>
+            </td>
+            <td>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox">
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Ullrich</td>
+            <td>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox">
+                </label>
+              </div>
+            </td>
+            <td>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox">
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Bonzini</td>
+            <td>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox">
+                </label>
+              </div>
+            </td>
+            <td>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox">
+                </label>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-4">
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th>Table Number</th>
+            <th>Match Type z.B. OD</th>
+            <th>Match Type z.B. OE</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>1</td>
+            <td>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox">
+                </label>
+              </div>
+            </td>
+            <td>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox">
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox">
+                </label>
+              </div>
+            </td>
+            <td>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox">
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox">
+                </label>
+              </div>
+            </td>
+            <td>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox">
+                </label>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-12">
+        <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong>Tische hinzufügen</strong></h3>
+        </div>
+          </div>
+
+        <a href="{{ url_for('tournamentOverview') }}" class="btn btn-primary btn-lg btn-block">Tournament Overview</a>
+      </div>
+    </form>
+
+  </div>
+</div>
 </body>
 <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
