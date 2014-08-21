@@ -3,8 +3,33 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+<div class="container">
+  <br><br><br><br><br><br><br>
+  <div class="row">
+    <div class="col-md-4">
+      <button type="button" class="btn btn-primary btn-lg btn-block"><br>Neues Turnier Starten<br><br></button>
+      <button type="button" class="btn btn-default btn-lg btn-block"><br>aktuelles Turnier anzeigen<br><br></button>
+    </div>
+    <div class="col-md-6 col-md-push-2">
+      <p><strong>Infofenster (&ouml;ffnet neues Fenster)</strong></p>
+      <div class="list-group">
+        <a href="#" class="list-group-item">Spielermatrix</a>
+        <a href="#" class="list-group-item disabled" data-toggle="tooltip" data-placement="left" title="kein Turnier gestartet">Turnierbaum</a>
+        <a href="#" class="list-group-item">Spiel&uuml;bersicht</a>
+        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+        <a href="#" class="list-group-item">Vestibulum at eros</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script>
+  $('a').tooltip()
+</script>
 </html>
