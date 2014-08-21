@@ -1,10 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
+  <meta charset="UTF-8">
+  <title></title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+<div class="container">
+  <br><br><br><br><br><br><br>
 
+  <div class="row">
+    <form role="form">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong>Tournament Infos</strong></h3>
+        </div>
+        <div class="panel-body">
+          <div class="form-group">
+            <label for="tournamentName">Tournament Name</label>
+            <input type="name" class="form-control" id="tournamentName" placeholder="Enter Name">
+          </div>
+          <div class="form-group">
+            <label for="Date">Date</label>
+            <input type="date" class="form-control" id="date" placeholder="Date">
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong>Tournament Modes</strong></h3>
+        </div>
+        <div class="panel-body">
+          <div class="col-md-6">
+            <div class="form-group">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> DYP
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Double K.O.
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong>Entry Fee</strong></h3>
+        </div>
+        <div class="panel-body">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="tournamentName">Entry Fee</label>
+              <input type="name" class="form-control" id="entryFee" placeholder="Enter Name">
+              <label for="tournamentName">Entry Fee Junior</label>
+              <input type="name" class="form-control" id="tournamentName" placeholder="Enter Name">
+              <label for="tournamentName">Entry Fee Senior</label>
+              <input type="name" class="form-control" id="tournamentName" placeholder="Enter Name">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="tournamentName">Tournament entry fee addtion for non DFTB members<br><br>Addtion</label>
+              <input type="name" class="form-control" id="tournamentName" placeholder="Enter Name">
+              <label for="tournamentName">Addtion Junior</label>
+              <input type="name" class="form-control" id="tournamentName" placeholder="Enter Name">
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="Start Tournament" class="btn btn-default">GO!!!</button>
+    </form>
+
+  </div>
+</div>
 </body>
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </html>
