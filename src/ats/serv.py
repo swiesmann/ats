@@ -32,5 +32,11 @@ def tournamentInformation():
         "tournamentInformation.html"
     )
     return output
+@app.route("/tableSetup")
+def tournamentInformation():
+    output = render_template(
+        "tableSetup.html"
+    )
+    return output
 
 app.run(host='0.0.0.0')
