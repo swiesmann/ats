@@ -6,19 +6,120 @@
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<ul class="nav nav-pills nav-stacked">
-  <li class="active">
-    <a href="#">
-      <span class="badge pull-right">1</span>
-      Home
-    </a>
-     <a href="#">
-      <span class="badge pull-right">2</span>
-      test
-    </a>
-  </li>
-  ...
-</ul>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong>Player 1</strong></h3>
+        </div>
+        <div class="col-md-4">
+          <div class="panel-body">
+            <div class="form-group">
+              <label for="tournamentName">Player Number</label>
+              <input type="name" class="form-control" id="tournamentName" placeholder="Enter Name">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="panel-body">
+            <div class="form-group">
+              <b> Player Name: <br><br> Status: </b>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="panel-body">
+            <div class="form-group">
+              <b> Berty Betterson <br> not signed in </b>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong>Player 2</strong></h3>
+        </div>
+        <div class="col-md-4">
+          <div class="panel-body">
+            <div class="form-group">
+              <label for="tournamentName">Player Number</label>
+              <input type="name" class="form-control" id="tournamentName" placeholder="Enter Name">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="panel-body">
+            <div class="form-group">
+              <b> Player Name: <br><br> Status: </b>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="panel-body">
+            <div class="form-group">
+              <b> Blubsie Betterson <br><br> not signed in </b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="col-md-2">
+        <ul class="nav nav-pills nav-stacked">
+          <li class="deactive">
+            <a href="#">
+              <span class="badge pull-right">1</span>
+              OD
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-md-2">
+        <ul class="nav nav-pills nav-stacked">
+          <li class="active">
+            <a href="#">
+              <span class="badge pull-right">2</span>
+              OS
+            </a>
+          </li>
+        </ul>
+      </div>
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>Team Number</th>
+          <th>Team Name</th>
+          <th>Entry Fee</th>
+          <th>Paid</th>
+          <th>Set</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>1</td>
+          <td>Rolf Mustermann / Bert Musterfrau</td>
+          <td>10€</td>
+          <td>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox">
+              </label>
+            </div>
+          </td>
+          <td>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox">
+              </label>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+  </div>
 </body>
 <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
