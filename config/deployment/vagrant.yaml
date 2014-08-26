@@ -1,0 +1,56 @@
+- hosts: all
+  vars_files:
+    - vars.yaml
+  sudo: True
+
+  tasks:
+  - name: Update APT
+    apt: update_cache=yes
+
+  - name: Setup commands
+    shell: "{{ item }}"
+    with_items:
+      - "echo mysql-server-5.5 mysql-server/root_password password {{ mysql.pass }} | sudo debconf-set-selections"
+      - "echo mysql-server-5.5 mysql-server/root_password_again password {{ mysql.pass }} | sudo debconf-set-selections"
+      - "echo phpmyadmin phpmyadmin/dbconfig-install boolean true | sudo debconf-set-selections"
+      - "echo phpmyadmin phpmyadmin/app-password-confirm password {{ mysql.pass }} | sudo debconf-set-selections"
+      - "echo phpmyadmin phpmyadmin/mysql/admin-pass password {{ mysql.pass }} | sudo debconf-set-selections"
+      - "echo phpmyadmin phpmyadmin/mysql/app-pass password {{ mysql.pass }} | sudo debconf-set-selections"
+      - "echo phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2 | sudo debconf-set-selections"
+
+  - name: Install MySQL
+    apt: pkg={{ item }} state=present
+    with_items:
+      - mysql-server
+      - python-mysqldb
+      - phpmyadmin
+      - vim
+
+  - name: open up MySQL server to the host
+    lineinfile: dest=/etc/mysql/my.cnf
+                regexp='127\.0\.0\.1'
+                line="bind-address = {{ ansible_eth1.ipv4.address }}"
+
+  - name: create Database
+    mysql_db:
+      login_user: root
+      login_password: root
+      name: kickernhh
+      state: present
+
+  - name: MySQL | Set the root password.
+    mysql_user:
+      login_user: {{ mysql.user }}
+      login_password: {{ mysql.pass }}
+      user: root
+      host: "{{item}}"
+      password: root
+      priv: "*.*:ALL,GRANT"
+    with_items:
+     - 192.168.33.1
+     - 127.0.0.1
+     - ::1
+     - localhost
+
+  - name: restart MySQL server
+    service: name=mysql state=restarted

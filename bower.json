@@ -1,0 +1,22 @@
+{
+  "name": "ats",
+  "version": "0.0.1",
+  "authors": [
+    "Roland von Ohlen <roland@rvo-host.net>",
+    "Niklas Olberdings <dont@know>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3",
+    "angular-fontawesome": "~0.1.2",
+    "angular-bootstrap": "~0.11.0"
+  }
+}

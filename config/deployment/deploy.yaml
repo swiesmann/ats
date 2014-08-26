@@ -1,0 +1,20 @@
+- hosts: staging
+  vars_files:
+  - vars.yaml
+  remote_user: kickernhh
+  gather_facts: False
+
+  tasks:
+  - name: create directory
+    file: path=/tmp/{{ project_name }} state=directory
+
+  - name: pull repo
+    git: repo={{ project_repo }} dest={{ project_root }} version={{ branch }} accept_hostkey=True
+    notify:
+      - restart uwsgi
+
+  - name: collect static files
+    django_manage: app_path={{ django_path }} virtualenv={{ project_root }} command=collectstatic
+
+  handlers:
+    - include: handlers.yaml

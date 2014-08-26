@@ -1,0 +1,16 @@
+project_name: Example Project
+project_lang: de
+
+build:
+  dist_folder: local/dist
+  dist_js: local/dist/js
+  dist_styles: local/dist/css
+  dist_fonts: local/dist/css/fonts
+  dist_images: local/dist/img
+
+  js_files: ./tmp/**/*.js
+  misc:
+    print_config: false
+
+  connect:
+    livereload: true

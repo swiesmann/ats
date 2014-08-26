@@ -1,0 +1,6 @@
+project_name: mbp
+
+mysql:
+  user: root
+  pass: root
+  name: {{ project_name }}
