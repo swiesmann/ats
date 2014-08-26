@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
+  <meta charset="UTF-8">
+  <title></title>
   <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <style type="text/css">
@@ -37,19 +37,20 @@
 <br>
 <br>
 <br>
+
 <div class="container">
   <div class="row">
     <div class="col-md-12">
       <table class="table table-bordered">
-      <thead>
+        <thead>
         <tr>
           <th>#</th>
           <th>First Name</th>
           <th>Last Name</th>
           <th>Username</th>
         </tr>
-      </thead>
-      <tbody>
+        </thead>
+        <tbody>
         <tr>
           <td rowspan="2">1</td>
           <td>Mark</td>
@@ -67,25 +68,25 @@
           <td>Thornton</td>
           <td>@fat</td>
         </tr>
-      </tbody>
-    </table>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
-			<div class="settings panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title"><i class="fa fa-fw fa-gear" style="float: right;"></i></h3>
-					<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
-				</div>
-				<div class="panel-body">
-                    <form role="form">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Email address</label>
-                      <input type="number" class="form-control" id="fontSize" placeholder="fontSize">
-                    </div>
-                  </form>
-				</div>
-		    </div>
+<div class="settings panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><i class="fa fa-fw fa-gear" style="float: right;"></i></h3>
+    <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+  </div>
+  <div class="panel-body">
+    <form role="form">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="number" class="form-control" id="fontSize" placeholder="fontSize">
+      </div>
+    </form>
+  </div>
+</div>
 <button id="switchView" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
   <i class="fa fa-fw fa-eye"></i>
 </button>
@@ -94,46 +95,52 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                class="sr-only">Close</span></button>
         <h4 class="modal-title">Ansicht wechseln</h4>
       </div>
       <div class="modal-body text-center">
         <div class="btn-group-vertical btn-group-lg">
-          <a href="{{ url_for('tournamentInformation') }}" class="btn btn-default"><i class="fa fa-user"></i> Spielermatrix</a>
-          <a href="{{ url_for('tournamentInformation') }}" class="btn btn-default"><i class="fa fa-table"></i> Turnierbaum</a>
+          <a href="{{ url_for('tournamentInformation') }}" class="btn btn-default"><i class="fa fa-user"></i>
+            Spielermatrix</a>
+          <a href="{{ url_for('tournamentInformation') }}" class="btn btn-default"><i class="fa fa-table"></i>
+            Turnierbaum</a>
           <a href="{{ url_for('tournamentInformation') }}" class="btn btn-default"><i class="fa fa-user"></i> Spieler&uuml;bersicht</a>
         </div>
       </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
 </body>
 <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-    $(function ($) {
-        $('.panel-heading span.clickable').on("click", function (e) {
-            if ($(this).hasClass('panel-collapsed')) {
-                // expand the panel
-                $(this).parents('.panel').find('.panel-body').slideDown();
-                $(this).removeClass('panel-collapsed');
-                $(this).find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
-            }
-            else {
-                // collapse the panel
-                $(this).parents('.panel').find('.panel-body').slideUp();
-                $(this).addClass('panel-collapsed');
-                $(this).find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
-            }
-        });
-
-      $( "#fontSize" ).change(function() {
-        var fs = $('#fontSize').val();
-        console.log(fs);
-        $('table').css({
-            fontSize: fs + 'px'
-        });
-        });
+  $(function ($) {
+    $('.panel-heading span.clickable').on("click", function (e) {
+      if ($(this).hasClass('panel-collapsed')) {
+        // expand the panel
+        $(this).parents('.panel').find('.panel-body').slideDown();
+        $(this).removeClass('panel-collapsed');
+        $(this).find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+      }
+      else {
+        // collapse the panel
+        $(this).parents('.panel').find('.panel-body').slideUp();
+        $(this).addClass('panel-collapsed');
+        $(this).find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+      }
     });
+
+    $("#fontSize").change(function () {
+      var fs = $('#fontSize').val();
+      console.log(fs);
+      $('table').css({
+        fontSize: fs + 'px'
+      });
+    });
+  });
 </script>
 </html>
